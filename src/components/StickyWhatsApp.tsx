@@ -6,9 +6,9 @@ export default function StickyWhatsApp() {
       <a
         href={CALL_URL}
         aria-label="اتصل بنا"
-        className="flex h-12 w-12 items-center justify-center rounded-full bg-elite-navy text-white shadow-xl transition-all duration-300 hover:scale-110 active:scale-95"
+        className="flex h-16 w-16 items-center justify-center rounded-full bg-elite-navy text-white shadow-xl transition-all duration-300 hover:scale-110 active:scale-95"
       >
-        <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <svg className="h-8 w-8" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path d="M6.62 10.79a15.15 15.15 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.56.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.56 1 1 0 01-.25 1.02l-2.2 2.21z" />
         </svg>
       </a>
