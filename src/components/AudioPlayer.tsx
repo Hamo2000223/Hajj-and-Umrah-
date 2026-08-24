@@ -122,10 +122,10 @@ export default function AudioPlayer() {
               
               <button
                 onClick={closePopup}
-                className="w-full flex items-center justify-center gap-2 rounded-full bg-elite-gold px-6 py-3.5 font-bold text-elite-navy shadow-lg transition-all duration-300 hover:scale-105 active:scale-95"
+                className="w-full flex items-center justify-center gap-2 rounded-full bg-elite-gold px-4 py-3 sm:px-6 sm:py-3.5 text-[15px] sm:text-base font-bold text-elite-navy shadow-lg transition-all duration-300 hover:scale-105 active:scale-95"
               >
                 <span>ابدأ رحلتك الإيمانية</span>
-                <svg className="h-5 w-5 rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="h-5 w-5 rtl:rotate-180 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </button>

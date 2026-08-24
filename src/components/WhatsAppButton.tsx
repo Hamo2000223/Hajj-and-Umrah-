@@ -22,13 +22,13 @@ const callStyles = {
 };
 
 const sizeStyles = {
-  md: "px-6 py-3 text-base",
-  lg: "px-8 py-4 text-lg",
+  md: "px-4 py-3 sm:px-6 sm:py-3 text-[15px] sm:text-base leading-tight",
+  lg: "px-4 py-3.5 sm:px-8 sm:py-4 text-base sm:text-lg leading-tight",
 };
 
 const callSizeStyles = {
-  md: "h-[52px] w-[52px]",
-  lg: "h-[60px] w-[60px]",
+  md: "h-[48px] w-[48px] sm:h-[52px] sm:w-[52px]",
+  lg: "h-[54px] w-[54px] sm:h-[60px] sm:w-[60px]",
 };
 
 function WhatsAppIcon({ className }: { className?: string }) {
@@ -72,8 +72,8 @@ export default function WhatsAppButton({
         className={`inline-flex min-w-0 flex-1 items-center justify-center gap-2 rounded-full font-bold transition-all duration-300 hover:scale-[1.02] active:scale-95 ${variantStyles[variant]} ${sizeStyles[size]}`}
       >
         <WhatsAppIcon className="h-5 w-5 shrink-0" />
-        <span>{label}</span>
-        <PhoneIcon className="h-5 w-5 shrink-0" />
+        <span className="text-center">{label}</span>
+        <PhoneIcon className="h-5 w-5 shrink-0 hidden sm:block" />
       </a>
       <a
         href={CALL_URL}
