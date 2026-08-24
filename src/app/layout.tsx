@@ -16,7 +16,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://elite-tours.eg"),
+  metadataBase: new URL("https://hajj-and-umrah-three.vercel.app"),
   title: "عمرة وحج مع إيليت للسياحة — أسوان وإدفو | 48000 جنيه",
   description:
     "احجز رحلة العمرة مع إيليت للسياحة — 48000 جنيه تشمل طيران مريح، فنادق قريبة من الحرم، وجبات كاملة، وإشراف ديني وإداري. لأهل أسوان وإدفو والقرى.",
