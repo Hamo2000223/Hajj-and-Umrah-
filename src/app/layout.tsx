@@ -53,6 +53,8 @@ export const metadata: Metadata = {
   },
 };
 
+import AudioPlayer from "@/components/AudioPlayer";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -66,6 +68,7 @@ export default function RootLayout({
     >
       <body className="min-h-screen bg-white font-sans antialiased">
         {children}
+        <AudioPlayer />
       </body>
     </html>
   );
