@@ -24,26 +24,33 @@ export default function AudioPlayer() {
     playAudio();
 
     // تشغيل الصوت عند أول تفاعل للمستخدم (نقر أو لمس)
-    const handleInteraction = async () => {
+    const handleInteraction = () => {
       if (!isPlaying) {
-        try {
-          await audio.play();
-          setIsPlaying(true);
-          // إزالة الأحداث بعد التشغيل الناجح
-          document.removeEventListener("click", handleInteraction);
-          document.removeEventListener("touchstart", handleInteraction);
-        } catch (e) {
-          console.error("Error playing audio after interaction:", e);
+        const playPromise = audio.play();
+        if (playPromise !== undefined) {
+          playPromise
+            .then(() => {
+              setIsPlaying(true);
+              // إزالة الأحداث بعد التشغيل الناجح
+              document.removeEventListener("click", handleInteraction);
+              document.removeEventListener("touchstart", handleInteraction);
+              document.removeEventListener("pointerdown", handleInteraction);
+            })
+            .catch((e) => {
+              console.error("Error playing audio after interaction:", e);
+            });
         }
       }
     };
 
     document.addEventListener("click", handleInteraction);
-    document.addEventListener("touchstart", handleInteraction);
+    document.addEventListener("touchstart", handleInteraction, { passive: true });
+    document.addEventListener("pointerdown", handleInteraction, { passive: true });
 
     return () => {
       document.removeEventListener("click", handleInteraction);
       document.removeEventListener("touchstart", handleInteraction);
+      document.removeEventListener("pointerdown", handleInteraction);
     };
   }, [isPlaying]);
 
