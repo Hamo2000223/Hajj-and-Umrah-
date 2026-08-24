@@ -61,7 +61,7 @@ export default function AudioPlayer() {
 
   return (
     <>
-      <audio ref={audioRef} src="/hajj-song.mp3" loop />
+      <audio ref={audioRef} src="/hajj-song.mp3" loop autoPlay />
       <button
         onClick={togglePlay}
         aria-label="Toggle Audio"
