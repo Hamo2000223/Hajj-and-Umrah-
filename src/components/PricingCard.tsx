@@ -42,19 +42,21 @@ export default function PricingCard() {
               </div>
             </div>
 
-            <ul className="mb-10 space-y-4">
-              {inclusions.map((item) => (
-                <li
-                  key={item}
-                  className="flex items-center justify-between gap-3 text-lg text-white"
-                >
-                  <span>{item}</span>
-                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-elite-gold/20 text-sm text-elite-gold">
-                    ✓
-                  </span>
-                </li>
-              ))}
-            </ul>
+            <div className="mb-10 flex justify-center">
+              <ul className="space-y-4 text-right">
+                {inclusions.map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-center gap-3 text-lg text-white"
+                  >
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-elite-gold/20 text-sm text-elite-gold">
+                      ✓
+                    </span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
             <div className="flex justify-center">
               <WhatsAppButton
