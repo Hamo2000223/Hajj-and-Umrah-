@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import FadeIn from "@/components/FadeIn";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { PACKAGE_PRICE } from "@/lib/constants";
@@ -12,6 +15,13 @@ const inclusions = [
 ];
 
 export default function PricingCard() {
+  const [seatsLeft, setSeatsLeft] = useState<number | null>(null);
+
+  useEffect(() => {
+    // رقم عشوائي بين 3 و 9 لإعطاء مصداقية
+    setSeatsLeft(Math.floor(Math.random() * 7) + 3);
+  }, []);
+
   return (
     <section id="pricing" className="overflow-visible bg-elite-navy py-24">
       <div className="mx-auto max-w-4xl px-6">
@@ -56,6 +66,19 @@ export default function PricingCard() {
                   </li>
                 ))}
               </ul>
+            </div>
+
+            {/* عداد الأماكن المتبقية */}
+            <div className="mb-6 flex justify-center">
+              <div className="inline-flex items-center gap-2 rounded-full border border-red-500/30 bg-red-500/10 px-4 py-2 text-red-200">
+                <span className="relative flex h-3 w-3">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400 opacity-75"></span>
+                  <span className="relative inline-flex h-3 w-3 rounded-full bg-red-500"></span>
+                </span>
+                <span className="text-sm font-semibold sm:text-base">
+                  سارع بالحجز! متبقي {seatsLeft !== null ? seatsLeft : "..."} مقاعد فقط.
+                </span>
+              </div>
             </div>
 
             <div className="flex justify-center">
