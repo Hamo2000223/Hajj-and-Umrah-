@@ -4,7 +4,7 @@ export const WHATSAPP_MESSAGE =
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 export const CALL_URL = `tel:+${WHATSAPP_NUMBER}`;
 
-export const PACKAGE_PRICE = 48000;
+export const PACKAGE_PRICE = 44000;
 export const COMPANY_NAME = "إيليت للسياحة";
 export const COMPANY_NAME_EN = "Elite Tours";
 export const LOCATION = "أسوان وإدفو والقرى المجاورة";
